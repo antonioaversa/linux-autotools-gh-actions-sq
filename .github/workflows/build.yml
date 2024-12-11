@@ -32,7 +32,7 @@ jobs:
       - name: Install sonar-scanner and build-wrapper
         uses: sonarsource/sonarqube-github-c-cpp@antonio/SQCPPGHA-9-rebranding-and-forward
         env:
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
+          SONAR_HOST_URL: http://localhost:9000 # SonarQube URL is stored in a GitHub secret
       - name: Run build-wrapper
         run: |
           autoreconf --install
